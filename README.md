@@ -17,4 +17,10 @@ Take a look here for detailed instructions:
 5. Update your dotfiles to the latest copies `chezmoi update`
 6. Make a change to a managed file `chezmoi edit ~/.zshrc`
 7. Apply the change `chezmoi apply`
-8. Push the change to this repo `chezmoi source -- commit -m "latest change"`. Or use `chezmoi cd`
+8. Share the changes to this repo
+```shell script
+chezmoi source -- add .
+chezmoi source -- commit -m "latest change"
+chezmoi source -- push
+# or you could issue 'chezmoi cd' and use git normally
+```
