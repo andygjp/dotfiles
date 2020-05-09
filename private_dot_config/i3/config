@@ -181,4 +181,4 @@ bar {
         status_command i3status
 }
 
-bindsym $mod+p exec i3lock
+bindsym $mod+p exec i3lock --color=000000 --ignore-empty-password --pointer=default --show-failed-attempts
