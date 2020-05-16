@@ -191,3 +191,11 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Show scratchpad window. Toggle tilling/floating to remove window from scratchpad
 bindsym $mod+minus scratchpad show
+
+# The middle button over a titlebar kills the window
+bindsym --release button2 kill
+
+# The middle button and a modifer over any part of the window kills the window
+bindsym --whole-window $mod+button2 kill
+
+# Right-click titlebar and Mod + right-click the window resizes
