@@ -148,7 +148,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
+# resize window (you can also use the mouse for that - right-click titlebar and Mod + right-click the window)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -198,4 +198,20 @@ bindsym --release button2 kill
 # The middle button and a modifer over any part of the window kills the window
 bindsym --whole-window $mod+button2 kill
 
-# Right-click titlebar and Mod + right-click the window resizes
+# Move floating windows
+mode "moveit" {
+    bindsym l move up 20 px
+    bindsym j move left 20 px
+    bindsym k move down 20 px
+    bindsym semicolon move right 20 px
+
+    bindsym Up move up 20 px
+    bindsym Left move left 20 px
+    bindsym Down move down 20 px
+    bindsym Right move right 20 px
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+m mode "default"
+}
+bindsym $mod+m focus floating; mode "moveit"
